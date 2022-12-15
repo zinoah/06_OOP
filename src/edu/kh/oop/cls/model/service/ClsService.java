@@ -1,6 +1,7 @@
 package edu.kh.oop.cls.model.service;
 
 import edu.kh.oop.cls.model.vo.Student;
+import edu.kh.oop.cls.model.vo.User;
 
 public class ClsService {
 	// 클래스 접근제한자 확인하기
@@ -68,5 +69,53 @@ public class ClsService {
 		
 		
 		
+	}
+	
+	public void ex3() {
+		//생성자 확인 테스트
+		
+		Student s1 = new Student();
+						//기본 생성자
+		
+		//user 기본 생성자를 이용해서 객체 생성
+		User u1 = new User();
+	
+		
+		// User 객체 필드 초기화 확인
+		System.out.println(u1.getUserId());
+		System.out.println(u1.getUserPw());
+		System.out.println(u1.getUserName());
+		System.out.println(u1.getUserAge());
+		System.out.println(u1.getUserGender());
+		// ==> 클래스에서 getter/setter 미작성시
+		// 간접 접근 불가능
+		
+		
+		System.out.println("===================================");
+		
+		
+		//문제점 : u1이 참조하고 있는 user객체와
+		//		  u2가 참조하고 있는 user객체가 필드의 값이 모두 동일함.
+		// 		  같은 기본생성자로 user객체 생성했기 때문에...
+		
+		//해결 방법 1: setter를 이용해서 새로운 값을 대입
+		User u2 = new User();
+		
+		
+		u2.setUserId("dfafafasfd");
+		u2.setUserPw("dfafa");
+		u2.setUserName("김영희");
+		u2.setUserAge(5);
+		u2.setUserGender('M');
+		
+		System.out.println(u2.getUserId());
+		System.out.println(u2.getUserPw());
+		System.out.println(u2.getUserName());
+		System.out.println(u2.getUserAge());
+		System.out.println(u2.getUserGender());
+		
+		
+		User u3 = new User("test33", "pw234");
+		User u4 = new User("test44", "pw567");
 	}
 }
