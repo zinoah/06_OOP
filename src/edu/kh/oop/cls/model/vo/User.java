@@ -67,7 +67,37 @@ public class User {
 	// *** 자바 ***
 	// 자바는 기본적으로 필드명, 생성자명, 메소드명, 변수명의 중복을 허용하지 않음.
 	
+	// ***오버로딩(Over Loading)***
+	//- 클래스 내에 동일한 이름의 매서드(생성자도 포함)를 여러개 작성하는 기법
+	// -> 하나의 이름으로 여러 기능을 수행할 수 있게 한다.
 	
+	//[오버로딩 조건]
+	//1) 메서드 (생성자 포함)의 이름이 동일
+	//2) 매개변수의 개수, 타입, 순서 중 1개라도 달라야함
+	
+	//public User() {} // 기본 생성자가 이미 작성되어있어 중복으로 인식
+	
+	public User(String userId) {}//매개변수의 개수가 같은 생성자가 없음
+								// -> 오버로딩 성립
+	
+	public User(int userAge) {} //매개변수의 개수는 같지만 타입이 다름
+								//-> 오버로딩 성립
+	
+	public User(String userId, int UserAge) {}
+	// 매개변수의 개수가 위에 같은것이 있으나, 매개변수의 타입이 다름.
+	// -> 오버로딩 성립
+
+	public User(int userAge, String userId) {}
+	// 매개변수의 개수와 타입은 같으나, 순서가 다름 
+	// -> 오버로딩 성립
+	
+	//public User(int userAge, String userName) {}
+	// 매개변수의 개수, 타입, 순서가 모두 같아서 오버로딩 불가
+	// -> 변수명은 신경쓰지 않는다!!
+	
+	public User(String userId, String userPw, String userName) {}
+	//public User(String userName, String userId, String userPw) {}
+	// 위와 똑같은 이유로 오버로딩 불가
 	
 	// 메서드
 	// 캡슐화로 인한 간접 접근 기능(getter/setter) 
@@ -118,5 +148,6 @@ public class User {
 	// getter/ setter 자동완성
 	// alt + shift + s -> Generate Getters and Setter
 	// => 선택 후 generate
+	
 	
 }
