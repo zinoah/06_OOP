@@ -115,7 +115,28 @@ public class ClsService {
 		System.out.println(u2.getUserGender());
 		
 		
+		
+		//매개변수 생성자 사용 
+		
 		User u3 = new User("test33", "pw234");
+		System.out.println(u3.getUserId());
+		System.out.println(u3.getUserPw());
+		System.out.println(u3.getUserName());
+		System.out.println(u3.getUserAge());
+		System.out.println(u3.getUserGender());
+		
 		User u4 = new User("test44", "pw567");
+		System.out.println(u4.getUserId());
+		System.out.println(u4.getUserPw());
+		System.out.println(u4.getUserName());
+		System.out.println(u4.getUserAge());
+		System.out.println(u4.getUserGender());
+		
+		User u5 = new User("test55", "pw888", "철수", 48, 'M');
+		System.out.println(u5.getUserId());
+		System.out.println(u5.getUserPw());
+		System.out.println(u5.getUserName());
+		System.out.println(u5.getUserAge());
+		System.out.println(u5.getUserGender());
 	}
 }
