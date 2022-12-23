@@ -7,8 +7,8 @@ public class ClsRun {
 	public static void main(String[] args) {
 		ClsService cls = new ClsService();
 		//cls.ex1();
-		//cls.ex2();
-		cls.ex3();
+		cls.ex2();
+		//cls.ex3();
 	}
 
 }

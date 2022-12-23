@@ -138,5 +138,6 @@ public class ClsService {
 		System.out.println(u5.getUserName());
 		System.out.println(u5.getUserAge());
 		System.out.println(u5.getUserGender());
+		
 	}
 }
